@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Expense Tracker Privacy Policy</title>
+<meta name="description" content="Privacy policy for the Expense Tracker Android app.">
+<style>
+  :root {
+    --bg: #fafaf9;
+    --fg: #1c1917;
+    --muted: #57534e;
+    --line: #e7e5e4;
+    --accent: #0f766e;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171717;
+      --fg: #f5f5f4;
+      --muted: #a8a29e;
+      --line: #2e2e2e;
+      --accent: #5eead4;
+      --card: #1f1f1f;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 20px 64px;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+  h2 { font-size: 1.2rem; margin: 40px 0 8px; padding-top: 24px; border-top: 1px solid var(--line); }
+  p, ul { margin: 0 0 14px; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--accent); }
+  .meta { color: var(--muted); margin-bottom: 28px; }
+  .summary {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 16px 20px;
+  }
+  .summary ul { margin: 0; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy Policy for Expense Tracker</h1>
+  <p class="meta">Effective date: 14 September 2026</p>
+
+  <p>
+    This policy explains how the Expense Tracker Android app ("the app"), developed by Alan Sangeeth S
+    ("I", "me"), handles your information. The app is designed to work entirely on your device.
+  </p>
+
+  <div class="summary">
+    <ul>
+      <li>All your data is stored only on your device.</li>
+      <li>The app has no internet permission. It cannot send your data anywhere.</li>
+      <li>No accounts, sign-in, ads, analytics or tracking.</li>
+      <li>SMS messages are read on the device only to detect bank debit alerts, and the message text is never saved.</li>
+      <li>I never collect, sell or share your data.</li>
+    </ul>
+  </div>
+
+  <h2>1. Information the app handles</h2>
+  <p>The app handles the following information only on your device:</p>
+  <ul>
+    <li><strong>Financial records you enter:</strong> transactions (amount, date, category, account and note), categories, accounts with opening balances, monthly budgets and currency preference.</li>
+    <li><strong>Custom SMS keywords you add:</strong> words you set up to match banks, categories, accounts and debit phrases.</li>
+    <li><strong>App preferences:</strong> the last period and filters you selected.</li>
+    <li><strong>Incoming SMS messages:</strong> read only as described in section 2, if you grant the permission.</li>
+  </ul>
+  <p>None of this information is sent to me or to any third party.</p>
+
+  <h2>2. SMS permission (RECEIVE_SMS)</h2>
+  <p>
+    The app requests the <code>RECEIVE_SMS</code> permission so it can detect bank transaction alerts and
+    help you record spending without typing it. This feature is optional. You can deny or revoke the permission
+    at any time in Android Settings, and the rest of the app keeps working.
+  </p>
+  <p>When a new SMS arrives, the app:</p>
+  <ul>
+    <li>Checks, on your device, whether the message is a debit alert from a supported bank or a bank you added.</li>
+    <li>Ignores all other messages, including personal messages, OTPs, credits, reminders and promotions. They are not saved or processed further.</li>
+    <li>For a debit alert, extracts the amount, date, merchant name, and a suggested account and category, and shows you a notification.</li>
+    <li>Saves nothing until you tap the notification, review the prefilled record and choose to save it.</li>
+  </ul>
+  <p>
+    The full SMS text is never stored, uploaded or shared. The app only reacts to new messages as they arrive and
+    does not read your existing SMS inbox.
+  </p>
+
+  <h2>3. Notifications (POST_NOTIFICATIONS)</h2>
+  <p>
+    The app uses the notification permission only to show a prompt when a bank debit alert is detected. Notifications
+    are created on your device and contain the detected amount, account, category and merchant.
+  </p>
+
+  <h2>4. Data storage and security</h2>
+  <p>
+    Your data is stored in the app's private storage on your device, which other apps cannot access. The app does not
+    include any internet access, analytics, advertising or third-party tracking SDKs.
+  </p>
+
+  <h2>5. Backups</h2>
+  <ul>
+    <li>
+      <strong>Manual backup and import:</strong> you can export your data to a JSON file and import it later.
+      The file is saved only where you choose with the Android file picker. If you save it to a cloud service,
+      that service's privacy policy applies.
+    </li>
+    <li>
+      <strong>Android system backup:</strong> if Google backup is turned on for your device, Android may include the
+      app's data in your device backup to your Google account, as it does for other apps. This is controlled
+      by Android and Google, not by the app. You can turn it off in Android Settings.
+    </li>
+  </ul>
+
+  <h2>6. Sharing of information</h2>
+  <p>
+    I do not collect, sell, rent, trade or share any personal or financial information. The app is distributed through
+    Google Play, and Google may collect information under its own
+    <a href="https://policies.google.com/privacy">privacy policy</a>.
+  </p>
+
+  <h2>7. Data retention and deletion</h2>
+  <p>Your data stays on your device until you delete it. You can:</p>
+  <ul>
+    <li>Delete individual records, categories and accounts in the app.</li>
+    <li>Use <strong>Delete all records</strong> in the app menu to clear all transactions.</li>
+    <li>Clear the app's storage or uninstall the app to delete all app data from your device.</li>
+  </ul>
+  <p>Because I never receive your data, I have no copy to delete.</p>
+
+  <h2>8. Children's privacy</h2>
+  <p>
+    The app is not directed at children under 13 and does not knowingly collect information from children.
+  </p>
+
+  <h2>9. Changes to this policy</h2>
+  <p>
+    If this policy changes, the updated version will be posted on this page with a new effective date.
+  </p>
+
+  <h2>10. Contact</h2>
+  <p>
+    If you have questions about this policy, contact:<br>
+    Alan Sangeeth S<br>
+    Email: <a href="mailto:alansangeeth@gmail.com">alansangeeth@gmail.com</a>
+  </p>
+
+  <footer>&copy; 2026 Alan Sangeeth S. Expense Tracker for Android.</footer>
+</main>
+</body>
+</html>
