@@ -54,69 +54,127 @@
 <body>
 <main>
   <h1>Privacy Policy for Expense Tracker</h1>
-  <p class="meta">Effective date: 14 September 2026</p>
+  <p class="meta">Effective date: 1 November 2026</p>
 
   <p>
     This policy explains how the Expense Tracker Android app ("the app"), developed by Alan Sangeeth S
-    ("I", "me"), handles your information. The app is designed to work entirely on your device.
+    ("I", "me"), handles your information. It also covers the optional web reports page that works with the app.
+    The app keeps your records on your device, and I do not run a server for it. A few features use the internet,
+    and each one is described below.
   </p>
 
   <div class="summary">
     <ul>
-      <li>All your data is stored only on your device.</li>
-      <li>The app has no internet permission. It cannot send your data anywhere.</li>
-      <li>No accounts, sign-in, ads, analytics or tracking.</li>
-      <li>SMS messages are read on the device only to detect bank debit alerts, and the message text is never saved.</li>
-      <li>I never collect, sell or share your data.</li>
+      <li>Your records are stored on your device. I never receive them.</li>
+      <li>The app uses the internet for Google Play (subscriptions and updates), for optional backups to your own Google Drive, and for a check that applies only if you have free Premium access.</li>
+      <li>With Premium and your permission, the app reads new bank messages as they arrive and, when you import past messages, your SMS inbox.</li>
+      <li>The app saves details from bank messages, such as the amount and merchant, but not the full message text.</li>
+      <li>If you turn on Google Drive backup, your records, including those details, are copied to your Google Drive.</li>
+      <li>No ads and no analytics or tracking of my own. The app has no account of its own to sign up for.</li>
+      <li>I do not sell your data.</li>
     </ul>
   </div>
 
   <h2>1. Information the app handles</h2>
-  <p>The app handles the following information only on your device:</p>
+  <p>The app stores the following information on your device:</p>
   <ul>
-    <li><strong>Financial records you enter:</strong> transactions (amount, date, category, account and note), categories, accounts with opening balances, monthly budgets and currency preference.</li>
-    <li><strong>Custom SMS keywords you add:</strong> words you set up to match banks, categories, accounts and debit phrases.</li>
-    <li><strong>App preferences:</strong> the last period and filters you selected.</li>
-    <li><strong>Incoming SMS messages:</strong> read only as described in section 2, if you grant the permission.</li>
+    <li><strong>Financial records you enter or save:</strong> transactions (amount, date, category, account and note), categories, accounts with opening balances, monthly budgets, bills and subscriptions, repeating records and currency preference.</li>
+    <li><strong>Money owed:</strong> entries in the owe list, including the names of the people you add.</li>
+    <li><strong>Details taken from bank messages:</strong> amount, date, merchant or payer name, bank name, the last four digits of a card or account when the message gives them, and bill names, amounts and due dates.</li>
+    <li><strong>Custom words you add:</strong> words you set up to match banks, categories, accounts and debit phrases.</li>
+    <li><strong>App settings:</strong> your preferences, and the last period and filters you selected. The app also checks your SIM or network country on the device to suggest a currency.</li>
+    <li><strong>Your Google account address:</strong> only if you connect Google Drive or enter it under "Have free access?".</li>
   </ul>
-  <p>None of this information is sent to me or to any third party.</p>
 
-  <h2>2. SMS permission (RECEIVE_SMS)</h2>
+  <h2>2. Reading bank messages</h2>
   <p>
-    The app requests the <code>RECEIVE_SMS</code> permission so it can detect bank transaction alerts and
-    help you record spending without typing it. This feature is optional. You can deny or revoke the permission
-    at any time in Android Settings, and the rest of the app keeps working.
+    Reading bank messages is an optional Premium feature, also available during a free trial. It helps you record
+    spending, income and bills without typing them. You can deny or revoke each permission below at any time in Android
+    Settings, and the rest of the app keeps working.
   </p>
-  <p>When a new SMS arrives, the app:</p>
   <ul>
-    <li>Checks, on your device, whether the message is a debit alert from a supported bank or a bank you added.</li>
-    <li>Ignores all other messages, including personal messages, OTPs, credits, reminders and promotions. They are not saved or processed further.</li>
-    <li>For a debit alert, extracts the amount, date, merchant name, and a suggested account and category, and shows you a notification.</li>
-    <li>Saves nothing until you tap the notification, review the prefilled record and choose to save it.</li>
+    <li><strong>New SMS (<code>RECEIVE_SMS</code>):</strong> the app checks each new SMS as it arrives.</li>
+    <li>
+      <strong>Past messages (<code>READ_SMS</code>):</strong> when you scan messages, either when first offered or
+      with Import past messages, the app reads your SMS inbox for the period you choose, up to 365 days. Some phones
+      keep copies of chat messages with their MMS messages or in Samsung Messages, and the app reads those too where it can.
+      Every message in that period is checked on your device to find bank alerts.
+    </li>
+    <li>
+      <strong>RCS chat alerts (notification access):</strong> some banks send alerts as RCS chats, which reach
+      other apps only as notifications. If you turn on Read RCS chat alerts and allow notification access, Android lets
+      the app see the notifications on your device. The app reads only those from messaging apps (such as Google Messages,
+      Samsung Messages and your default SMS app) and ignores those from every other app.
+    </li>
+  </ul>
+  <p>When the app reads a message, it:</p>
+  <ul>
+    <li>Checks, on your device, whether the message is a debit, credit, bill or autopay alert from a supported bank or a bank you added.</li>
+    <li>Drops all other messages, including personal messages, one-time passwords and promotions. Nothing from them is saved.</li>
+    <li>For a debit or credit alert, extracts the details listed in section 1 and suggests an account and category.</li>
+    <li>For a new alert, saves a record automatically and shows a notification so you can edit, move or delete it. You can turn this off in Settings; a notification then opens a prefilled record, and nothing is saved unless you confirm it.</li>
+    <li>For an import, shows you what it found so you can choose which records to keep.</li>
+    <li>Adds bills and autopay payments to the Bills screen without asking first, for both new and imported messages. You can delete them there.</li>
   </ul>
   <p>
-    The full SMS text is never stored, uploaded or shared. The app only reacts to new messages as they arrive and
-    does not read your existing SMS inbox.
+    The full text of a message is never written to storage, uploaded or shared. While the app is running, it keeps the
+    text of recent messages in the phone's temporary memory so that it does not file the same message twice. That
+    text is cleared when Android closes the app. Details the app has saved are treated like your other records, so they
+    are included in any backup, export or web report you make.
   </p>
 
-  <h2>3. Notifications (POST_NOTIFICATIONS)</h2>
-  <p>
-    The app uses the notification permission only to show a prompt when a bank debit alert is detected. Notifications
-    are created on your device and contain the detected amount, account, category and merchant.
-  </p>
+  <h2>3. Other permissions</h2>
+  <ul>
+    <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> for detected alerts, spending summaries, bill and owe list reminders, budget alerts, repeating records and problems with Google Drive backup. Notifications are created on your device and can show amounts, accounts, categories and merchants.</li>
+    <li><strong>Run at startup (<code>RECEIVE_BOOT_COMPLETED</code>):</strong> to set reminders and repeating records again after your phone restarts.</li>
+    <li><strong>Internet and network state (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong> for the features in section 4.</li>
+    <li><strong>Google Play billing (<code>BILLING</code>):</strong> to offer and check Premium subscriptions.</li>
+  </ul>
 
-  <h2>4. Data storage and security</h2>
-  <p>
-    Your data is stored in the app's private storage on your device, which other apps cannot access. The app does not
-    include any internet access, analytics, advertising or third-party tracking SDKs.
-  </p>
-
-  <h2>5. Backups</h2>
+  <h2>4. When the app uses the internet</h2>
   <ul>
     <li>
-      <strong>Manual backup and import:</strong> you can export your data to a JSON file and import it later.
-      The file is saved only where you choose with the Android file picker. If you save it to a cloud service,
-      that service's privacy policy applies.
+      <strong>Google Play:</strong> subscriptions and app updates go through Google Play. Google handles your payment,
+      and I never see your card details. Google's libraries in the app may send diagnostic information to Google. The app
+      contains no advertising SDK and no analytics SDK of my own.
+    </li>
+    <li>
+      <strong>Google Drive backup:</strong> only if you turn it on. See section 6.
+    </li>
+    <li>
+      <strong>Free access list:</strong> only if you enter a Google account under "Have free access?". The app downloads
+      a public list of hashed addresses, at most about once a day, and compares it with your address on your phone. Your
+      address is not sent. Cloudflare hosts the list and, like any web host, handles your IP address to deliver it.
+    </li>
+    <li>
+      <strong>Links you open:</strong> contacting support, rating the app or opening the web reports page takes you to
+      your email app, WhatsApp, Google Play or your browser. Their own privacy policies apply.
+    </li>
+  </ul>
+
+  <h2>5. Data storage and security</h2>
+  <p>
+    Your data is stored in the app's private storage on your device, which other apps cannot normally access. Connections
+    to Google Drive and to the free access list use HTTPS. The app does not add its own encryption to backups: backup and
+    export files are readable by anyone who can open them, so keep them somewhere safe. Backups in Google Drive are
+    protected by your Google account's security, so anyone with access to that account can read them.
+  </p>
+
+  <h2>6. Backups and exports</h2>
+  <ul>
+    <li>
+      <strong>Backup and export files:</strong> you can back up your data to a JSON file, export records as a CSV or
+      Excel file, and import them later. Each file is saved only where you choose with the Android file picker. If you
+      save it to a cloud service, that service's privacy policy applies.
+    </li>
+    <li>
+      <strong>Google Drive backup (Premium):</strong> off until you turn it on. It saves a backup to the folder "Expense
+      Tracker backups" in your own Google Drive, when you ask or daily, and keeps the latest seven. A backup contains your
+      records, bills, owe list, budgets, custom words, settings and which cards and accounts are linked, including their
+      last four digits. The app asks only for the <code>drive.file</code> permission, which covers files the app created
+      and nothing else in your Drive. It also reads your Google account address to show which account is connected.
+      Backups stay in your account. I cannot access them, and Google's
+      <a href="https://policies.google.com/privacy">privacy policy</a> applies.
     </li>
     <li>
       <strong>Android system backup:</strong> if Google backup is turned on for your device, Android may include the
@@ -124,34 +182,58 @@
       by Android and Google, not by the app. You can turn it off in Android Settings.
     </li>
   </ul>
-
-  <h2>6. Sharing of information</h2>
   <p>
-    I do not collect, sell, rent, trade or share any personal or financial information. The app is distributed through
-    Google Play, and Google may collect information under its own
-    <a href="https://policies.google.com/privacy">privacy policy</a>.
+    The use and transfer of information received from Google APIs will adhere to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+    including the Limited Use requirements. Data from Google Drive is used only to provide backup, restore and web reports to you.
   </p>
 
-  <h2>7. Data retention and deletion</h2>
+  <h2>7. Web reports page</h2>
+  <p>
+    Premium users can view reports in a browser at
+    <a href="https://expense-tracker.alansangeeth.workers.dev/">expense-tracker.alansangeeth.workers.dev</a>, either by
+    signing in with Google to read their latest Drive backup or by opening a backup file. The backup is read and
+    worked out in your browser and is not uploaded to me or to anyone else. Sign-in lasts only while the page is open, and
+    the only thing the page remembers in your browser is whether you chose to hide amounts. The page is hosted by
+    Cloudflare, which handles your IP address and similar connection details to deliver it, under its own
+    <a href="https://www.cloudflare.com/privacypolicy/">privacy policy</a>. If you sign in, Google handles that sign-in.
+  </p>
+
+  <h2>8. What I receive and share</h2>
+  <p>
+    I do not receive your records, messages or backups, and I do not sell, rent or trade personal or financial
+    information. I receive information only in these cases:
+  </p>
+  <ul>
+    <li><strong>Support:</strong> if you contact me, I receive what you send, along with your email address or WhatsApp number. Support emails start with your app version, device model and Android version, which you can remove before sending.</li>
+    <li><strong>Google Play:</strong> the app is distributed through Google Play, and Google may collect information under its own <a href="https://policies.google.com/privacy">privacy policy</a>. Play Console shows me order and subscription information for purchases, and install and crash statistics.</li>
+  </ul>
+
+  <h2>9. Data retention and deletion</h2>
   <p>Your data stays on your device until you delete it. You can:</p>
   <ul>
-    <li>Delete individual records, categories and accounts in the app.</li>
-    <li>Use <strong>Delete all records</strong> in the app menu to clear all transactions.</li>
+    <li>Delete individual records, bills, categories and accounts in the app.</li>
     <li>Clear the app's storage or uninstall the app to delete all app data from your device.</li>
+    <li>Delete Google Drive backups by removing the "Expense Tracker backups" folder from your Drive. Turning off Drive backup stops new backups but does not delete existing ones.</li>
+    <li>Remove the app's access to your Drive in your Google Account settings.</li>
+    <li>Delete any backup or export files you saved, and manage Android system backups in your device or Google Account settings.</li>
   </ul>
-  <p>Because I never receive your data, I have no copy to delete.</p>
+  <p>
+    Because I never receive your records, I have no copy to delete. I keep support messages only as long as they are
+    useful for helping you, and you can ask me to delete them using the contact details below.
+  </p>
 
-  <h2>8. Children's privacy</h2>
+  <h2>10. Children's privacy</h2>
   <p>
     The app is not directed at children under 13 and does not knowingly collect information from children.
   </p>
 
-  <h2>9. Changes to this policy</h2>
+  <h2>11. Changes to this policy</h2>
   <p>
     If this policy changes, the updated version will be posted on this page with a new effective date.
   </p>
 
-  <h2>10. Contact</h2>
+  <h2>12. Contact</h2>
   <p>
     If you have questions about this policy, contact:<br>
     Alan Sangeeth S<br>
